@@ -1,0 +1,29 @@
+{
+    "logo_path":"",
+    "background_image_path":"",
+    "target_form_id":"issue_description",
+    "text_format": [
+        [
+            "RELEASE NUMBER:[name-date_num-count]",
+            "RELEASE DATE :[date_text]",
+            "CLIENT NAME :",
+            "SYSTEM :",
+            "CLIENT VERSION :",
+            "MODULE :",
+            "DLL/ PHP MODULE :",
+            "MODULE VERSION :",
+            "_____________________________________________________________________________________",
+            "DETAILS:",
+            "CAUSE OF THE BUG:N/A",
+            "RESOLUTION/FIX :N/A",
+            "PATCH FILE LINK :N/A",
+            "INSTRUCTION:N/A",
+            "VALIDATION:"
+
+        ],
+        [
+            "wow",
+            "--------------------"
+        ]
+    ]
+}
