@@ -5,7 +5,19 @@
         // alert(name);
         chrome.cookies.set({"name":"username","url": cookie_url,"value":name},function(cookie){
             var data = JSON.stringify(cookie);
-            alert(data);
+            updateUsername(cookie.value);
+//            alert(data);
+        });
+        
+
+      
+    }
+
+    function updateUsername(name){
+          chrome.tabs.executeScript( {
+            file: 'documentator.js'
+        }, function() {
+            chrome.tabs.sendMessage( {parameter:name});
         });
     }
 
@@ -27,11 +39,12 @@
     var btn_save = document.getElementById("btn_save");
     btn_save.addEventListener("click",function(){
          save();
-         alert("wow");
+//         alert("wow");
     });
 
 
     chrome.cookies.get({"url":cookie_url, "name":"username"},function(cookie){
         var data = JSON.stringify(cookie);
         document.getElementById("name").value = cookie.value;
+        updateUsername(cookie.value);
     });
