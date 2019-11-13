@@ -1,10 +1,10 @@
 {
     "logo_path":"",
     "background_image_path":"",
-    "target_form_id":"issue_description",
+    "target_form_id":["issue_custom_field_values_11"],
     "text_format": [
         [
-            "RELEASE NUMBER:[name-date_num-count]",
+            "RELEASE NUMBER:[name-date_num-01]",
             "RELEASE DATE :[date_text]",
             "CLIENT NAME :",
             "SYSTEM :",
@@ -12,7 +12,7 @@
             "MODULE :",
             "DLL/ PHP MODULE :",
             "MODULE VERSION :",
-            "_____________________________________________________________________________________",
+            "__________________________________________________________",
             "DETAILS:",
             "CAUSE OF THE BUG:N/A",
             "RESOLUTION/FIX :N/A",
