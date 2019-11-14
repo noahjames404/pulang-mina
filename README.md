@@ -1,6 +1,9 @@
 # Pulang Mina
 Chrome extension specializes on creating release notes with ease (pinasaya version).
 
+## Extension Information:
+  - Works only on Google Chrome applications.
+
 ## Installation
 1. Download & Extract the zip file.
 2. Open google chrome.
