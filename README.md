@@ -5,7 +5,7 @@ Chrome extension specializes on creating release notes with ease (pinasaya versi
   - Works only on Google Chrome applications.
 
 ## Installation
-1. Download & Extract the zip file.
+1. Download & Extract the [zip file](https://github.com/noahjames404/pulang-mina/releases).
 2. Open google chrome.
 3. Type the following url in the search bar "chrome://extensions".
 4. At the top right corner activate the developer mode.
