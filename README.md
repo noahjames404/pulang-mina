@@ -46,6 +46,8 @@ Chrome extension specializes on creating release notes with ease (pinasaya versi
   target_form_id | an array of target id's to modify, this is base on the input field's id attribute
   text_format | a multidimensional array of text, the default template of release notes
   
+  > If the target_form_id already has contents inside (including white spaces), the default template will not override the current contents. 
+  
   When creating a release note template use a colon **":"** keyword to separate the field name & content.
   
   Valid fields.
@@ -65,5 +67,12 @@ Chrome extension specializes on creating release notes with ease (pinasaya versi
   date_text | the current date in text format e.g **Aug 3. 1997** (still having compability issues on ubuntu os)
   date_num | the current date in numerical format e.g **080397**
  
-  
-
+ 
+ 
+ ## Issues
+ If you're experiencing techinical difficulties with the extension such as:
+ - download button is not showing on target_form_id.
+ - new issues does not generate default templates.
+ 
+ Possible Solutions
+ - re-install the chrome extension.
