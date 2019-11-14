@@ -9,7 +9,7 @@ Specializes on creating release notes with ease (pinasaya version).
   Object | Value
   -------|-------
   logo_path  | image uri
-  target_form_id | an array of target id's to modify
+  target_form_id | an array of target id's to modify, this is base on the input field's id attribute
   text_format | a multidimensional array of text, the default template of release notes
   
   when creating a release note template use a colon **":"** keyword to separate the field name & content.
@@ -32,5 +32,10 @@ Specializes on creating release notes with ease (pinasaya version).
   date_num | the current date in numerical format e.g **080397**
  
   
-  
-  
+## Workflow
+
+1. Fill up the extension's popup form & click save. 
+2. Goto redmine & create a new issue, if you're already in **new issue form** refresh the webpage again to apply changes.
+3. A release note template will generate after loading the webpage.
+4. Next to the field is a **download document** button (located at the bottom).
+5. clicking the **download document** button generates a docx file that can also be open in odt (libre office) versions. It is a formatted release note with issue number appended at the start of the release note.
