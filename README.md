@@ -67,8 +67,8 @@ Chrome extension specializes on creating release notes with ease (pinasaya versi
   Keyword | Output
   --------|--------
   name    | the initial name of user e.g Noah James Yanga = **NJY**
-  date_text | the current date in text format e.g **Aug 3. 1997** (still having compability issues on ubuntu os)
-  date_num | the current date in numerical format e.g **080397**
+  date_text | the current date in text format e.g **November 22, 2019** (still having compability issues on ubuntu os)
+  date_num | the current date in numerical format e.g **112219**
  
  
  
