@@ -73,7 +73,7 @@ Chrome extension specializes on creating release notes with ease (pinasaya versi
  
  
  ## Issues
- If you're experiencing techinical difficulties with the extension such as:
+ If you're experiencing technical difficulties with the extension such as:
  - download button is not showing on target_form_id.
  - new issues does not generate default templates.
  
