@@ -14,7 +14,7 @@ Chrome extension specializes on creating release notes with ease (pinasaya versi
 7. After selecting the folder disable the developer mode.
 8. You've successfully added the extension to your chrome.
 
-## Workflow
+## How to use
 
 1. Fill up the extension's popup form & click save. 
 2. Goto redmine & create a new issue, if you're already in **new issue form** refresh the webpage again to apply changes.
