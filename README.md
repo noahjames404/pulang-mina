@@ -1,5 +1,23 @@
-# pulang-mina
-Specializes on creating release notes with ease (pinasaya version).
+# Pulang Mina
+Chrome extension specializes on creating release notes with ease (pinasaya version).
+
+## Installation
+1. Download & Extract the zip file.
+2. Open google chrome.
+3. Type the following url in the search bar "chrome://extensions".
+4. At the top right corner activate the developer mode.
+5. A menu bar will show up under the developer mode.
+6. click "Load Unpack", then navigate to the extracted zip file from step 1.
+7. After selecting the folder disable the developer mode.
+8. You've successfully added the extension to your chrome.
+
+## Workflow
+
+1. Fill up the extension's popup form & click save. 
+2. Goto redmine & create a new issue, if you're already in **new issue form** refresh the webpage again to apply changes.
+3. A release note template will generate after loading the webpage.
+4. Next to the field is a **download document** button (located at the bottom).
+5. clicking the **download document** button generates a docx file that can also be open in odt (libre office) versions. It is a formatted release note with issue number appended at the start of the release note.
 
 ## Documentation
 
@@ -32,10 +50,4 @@ Specializes on creating release notes with ease (pinasaya version).
   date_num | the current date in numerical format e.g **080397**
  
   
-## Workflow
 
-1. Fill up the extension's popup form & click save. 
-2. Goto redmine & create a new issue, if you're already in **new issue form** refresh the webpage again to apply changes.
-3. A release note template will generate after loading the webpage.
-4. Next to the field is a **download document** button (located at the bottom).
-5. clicking the **download document** button generates a docx file that can also be open in odt (libre office) versions. It is a formatted release note with issue number appended at the start of the release note.
