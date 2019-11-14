@@ -8,6 +8,8 @@ $(document).ready(function () {
         // alert("tite");
 
     });
+    
+   
 
 
     function stringFormat(data) {
@@ -16,7 +18,7 @@ $(document).ready(function () {
         var modified_data = raw_data.replace("name", getInitials(username));
         modified_data = modified_data.replace("date_num", getDateToday("numeric"));
         modified_data = modified_data.replace("date_text", getDateToday("text"));
-
+        
         data = data.replace(raw_data, modified_data);
         data = data.replace("[", "");
         data = data.replace("]", "");
@@ -88,6 +90,16 @@ $(document).ready(function () {
         }
         document.body.removeChild(downloadLink);
     }
+    function getReferenceIssue(){
+//        var title = $("html").filter('title').text();
+        var title = $(document).find("title").text();
+        if(title.indexOf("#") == -1){
+            return "";
+        }
+        var partial_title = title.substr(title.indexOf("#"));
+        var issue_id = partial_title.substr(0,partial_title.indexOf(" ") -1);
+        return "-"+issue_id;
+    }
 
     function generateTemplate() {
         $.getJSON(chrome.extension.getURL("format.json"), function (json) {
@@ -147,7 +159,8 @@ $(document).ready(function () {
             var data = list_contents[i].replace(title, "");
             if (i == 0) {
                 console.log("doc_filename: " + data);
-                doc_filename = data.replace(":", "");
+                data += getReferenceIssue();
+                doc_filename = data.replace(":", ""); 
             }
             if (title.length == 0) {
                 html_contents += "<tr >";
