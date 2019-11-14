@@ -23,10 +23,14 @@ Specializes on creating release notes with ease (pinasaya version).
   to add a horizontal divider add a 5 to n underscore "_", it will occupy two columns upon generating the template. 
    
  
-  Special keywords - this keywords are formatted upon generating the template. To apply Special keywords enclose the keyword with open & close brackets **"\[keyword\]"**, you can add multiple keywords inside the brackets as long as they are separated clearly using white spaces/dash/under score characters e.g:**"\[keyword1-keyword2\]"**.
+  Special keywords - this keywords are formatted upon generating the template. To apply Special keywords enclose the keyword with open & close brackets **\[keyword\]**, you can add multiple keywords inside the brackets as long as they are separated clearly using white spaces/dash/under score characters e.g:**\[keyword1-keyword2\]**.
   
-  
-  
+  Keyword | Output
+  --------|--------
+  name    | taken after filling up the name field in the extension's popup form
+  date_text | the current date in text format e.g **Aug 3. 1997** (still having compability issues on ubuntu os)
+  date_num | the current date in numerical format e.g **080397**
+ 
   
   
   
