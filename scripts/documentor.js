@@ -1,6 +1,7 @@
 $(document).ready(function () {
     var cookie_url = "http://developer.chrome.com/extensions/cookies.html";
     var username;
+    var logo_path = "";
     var target_form_id = [];
     var doc_filename = "";
     $("html").click(function () {
@@ -66,7 +67,7 @@ $(document).ready(function () {
         var url = 'data:application/vnd.ms-word;charset=utf-8,' + encodeURIComponent(html);
 
         // Specify file name
-        filename = filename ? filename + '.doc' : doc_filename + '.doc';
+        filename = filename ? filename + '.doc' : doc_filename.trim() + '.doc';
 
         // Create download link element
         var downloadLink = document.createElement("a");
@@ -97,6 +98,7 @@ $(document).ready(function () {
 
             }
 
+            logo_path = json.logo_path;
             target_form_id = json.target_form_id;
             for (var i = 0; i < json.target_form_id.length; i++) {
                 if ($("#" + json.target_form_id[i]).text().length == 0) {
@@ -149,7 +151,7 @@ $(document).ready(function () {
             }
             if (title.length == 0) {
                 html_contents += "<tr >";
-                if(data.indexOf("------") > -1){
+                if(data.indexOf("______") >= 0){
                     html_contents += "<td colspan='2'>" + data + "</td>";
                 }else {
                      html_contents += "<td></td>";
@@ -169,7 +171,7 @@ $(document).ready(function () {
         html_contents += "</table>";
 
         return `<div'>
-        <img src='http://jimac-inc.com/wp-content/uploads/2016/04/JIMAC-Jimac-Logo.png' />
+        <img src='`+logo_path+`' />
         <h1>RELEASE NOTE</h1>
         ` + html_contents + `
         <p style='text-align:right;font-size:12px'>ADDRESS:<span style='color:#3498db'>TC PLAZA BLDG., PH FLR #40 CORDILLERA ST, QUEZON AVE., QUEZON CITY</span><br>
