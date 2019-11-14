@@ -24,14 +24,30 @@ Chrome extension specializes on creating release notes with ease (pinasaya versi
 **format.json** - contains the text template of release note.
   setting up the format.json
   
+  Example Format
+  
+  ```
+   {
+    "logo_path":"http://path/to/my/image",
+    "target_form_id":["input_id"],
+    "text_format": [
+        [
+            "FIELD NAME 1 : VALUE",
+            "_________________________________",
+            "FIELD NAME 2 : VALUE"
+        ]
+    ]
+   }
+  ```
+  
   Object | Value
   -------|-------
   logo_path  | image uri
   target_form_id | an array of target id's to modify, this is base on the input field's id attribute
   text_format | a multidimensional array of text, the default template of release notes
   
-  when creating a release note template use a colon **":"** keyword to separate the field name & content.
-
+  When creating a release note template use a colon **":"** keyword to separate the field name & content.
+  
   Valid fields.
   - "CLIENT NAME :" a field with unassigned value.
   - "SYSTEM : Windows 7" a field with predefined value.
