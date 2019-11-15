@@ -71,6 +71,7 @@ Chrome extension specializes on creating release notes with ease (pinasaya versi
   
   ### Mailer Object
   Object | Description 
+  ------------|--------------
   to | recipient's email
   cc | Carbon copy email of other recipients 
   subject | the subject of email
