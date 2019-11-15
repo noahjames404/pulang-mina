@@ -20,5 +20,21 @@
             "VALIDATION:"
 
         ]
-    ]
+    ], 
+   "document_footer" : [
+   		["ADDRESS","TC PLAZA BLDG., PH FLR #40 CORDILLERA ST, QUEZON AVE., QUEZON CITY"],
+		["TELEPHONE","(632)742-6619/742-6832/742-8556 | FAX: (632) 742-6634"],
+		["WEBSITE","WWW.JIMAC-INC.COM"]
+   ],
+   "mailer": {
+          "to":"rommeljohnj@jimac-inc.com",
+          "cc":["jay-veet@jimac-inc.com"],
+          "subject": "",
+          "subject_alt_tfi":0
+   },
+   "user_recognition" : {
+       "enable": true,
+       "identify":"<< me >>",
+       "locate_on":"issue_assigned_to_id"
+   }    
 }

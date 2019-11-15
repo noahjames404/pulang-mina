@@ -4,18 +4,20 @@
 <head>
    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
          #main-panel {
-             width: 200px;
+             width: 300px;
          }
     </style>
 </head>
 
 <body>
    <div class='p-2' id='main-panel'>
-     <h4 class='text-danger'>Pulang Mina</h4>
+     <h4 class='text-danger text-center'>Pulang Mina <a class="fa fa-github" href="https://github.com/noahjames404/pulang-mina" target="_blank"></a></h4>
      <input id='name' name="name" class='form-control mb-2' placeholder="buong pangalan">
      <button class='btn btn-primary btn-block' id='btn_save'>isalba</button>  
+     <small class='text-info' id='message-saved' style="display: none">saved,refresh to apply changes</small>
      <script type="text/javascript" src="scripts/popup.js"></script>
    </div>
 </body>

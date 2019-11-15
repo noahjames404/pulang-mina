@@ -8,11 +8,11 @@
     },
     "content_scripts":[{
         "matches":["http://*/*","https://*/*"],
-        "js":["scripts/jquery.js","scripts/jspdf.js","scripts/documentor.js"],
+        "js":["scripts/jquery.js","scripts/notify.js","scripts/documentor.js"],
         "css":["pulang-mina-style.css"]
     }],
     "browser_action": {"default_popup": "popup.html"},
-    "web_accessible_resources":["jquery.js","jspdf.js","documentor.js","format.json"],
+    "web_accessible_resources":["jquery.js","notify.js","documentor.js","format.json"],
     "manifest_version": 2,
     "permissions": [
       "https://*/*",

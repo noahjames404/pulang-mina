@@ -3,22 +3,16 @@ var p = "hello";
 
 function save() {
     var name = document.getElementById("name").value;
-    chrome.cookies.set({
-        "name": "username",
-        "url": cookie_url,
-        "value": name,
-        "expirationDate": 9999999999
-    }, function (cookie) {
-        var data = JSON.stringify(cookie);
-    });
+    
 
     chrome.runtime.sendMessage({
         request:"update_username",value: name
     }, function (response) {
-        
+        document.getElementById("message-saved").style.display = "block";
+        setTimeout(function(){
+            document.getElementById("message-saved").style.display = "none";
+        },5000);
     });
-
-
 }
 
 
