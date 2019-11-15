@@ -15,12 +15,12 @@ Chrome extension specializes on creating release notes with ease (pinasaya versi
 8. You've successfully added the extension to your chrome.
 
 ## How to use
-
 1. Fill up the extension's popup form & click save. 
 2. Goto redmine & create a new issue, if you're already in **new issue form** refresh the webpage again to apply changes.
 3. A release note template will generate after loading the webpage.
-4. Next to the field is a **download document** button (located at the bottom).
-5. clicking the **download document** button generates a docx file that can also be open in odt (libre office) versions. It is a formatted release note with issue number appended at the start of the release note.
+4. Next to the field is a **Send Email** & **Download Document** button (located at the bottom).
+5. clicking the **Download Document** button generates a docx file that can also be open in odt (libre office) versions. It is a formatted release note with issue number appended at the start of the release note.
+6. You can send email directly to your receipient by clicking **Send Email** 
 
 ## Documentation
 
@@ -40,16 +40,36 @@ Chrome extension specializes on creating release notes with ease (pinasaya versi
             "FIELD NAME 2 : VALUE"
         ]
     ]
-   }
+   },
+   "document_footer" : [
+   		["TITLE","DESCRIPTION"]
+   ],
+   "mailer": {
+          "to":"emailme@gmail.com",
+          "cc":["what@gmail.com"],
+          "subject": "idk",
+          "subject_alt_tfi":0
+   },
+   "user_recognition" : {
+       "enable": true,
+       "identify":"value",
+       "locate_on":"dom_id"
+   }   
   ```
+  ### Properties
   
   Object | Value
   -------|-------
-  logo_path  | image uri
+  logo_path  | image uri string
   target_form_id | an array of target id's to modify, this is base on the input field's id attribute
   text_format | a multidimensional array of text, the default template of release notes
+  document_footer | is a multidimentional array of title & description, appears at the bottom of the downloaded document
+  mailer | an object used for sending generated mails, this does not include attachments (due to security concerns)
+  user_recognition | recognizes the username when extension's popup form is blank
   
   > If the target_form_id already has contents inside (including white spaces), the default template will not override the current contents. 
+  
+  ### Mailer Object
   
   When creating a release note template use a colon **":"** keyword to separate the field name & content.
   
