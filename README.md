@@ -71,16 +71,17 @@ Chrome extension specializes on creating release notes with ease (pinasaya versi
   
   ### Mailer Object
   Object | Description 
-  ------------|--------------
+  -------|------------
   to | recipient's email
   cc | Carbon copy email of other recipients 
   subject | the subject of email
   subject_alt_tfi | stands for **subject alternative text format index** works only if email is blank (an empty string), the subject will be base on text_format's array content.  
   
   ### User Recognition 
-  Object | Description
-  enable | allow extension to identify the user.
-  identify | identifies the user by a proxy text e.g << me >>.
+  Object    | Description
+  ----------|--------
+  enable    | allow extension to identify the user.
+  identify  | identifies the user by a proxy text e.g << me >>.
   locate_on | DOM id, specify where to located the username works only on <select> dom elements. 
   
   When creating a release note template use a colon **":"** keyword to separate the field name & content.
