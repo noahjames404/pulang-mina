@@ -133,7 +133,7 @@ $(document).ready(function () {
                 if (username != "") {
                     chrome.runtime.sendMessage({
                         request: "update_username",
-                        value:username
+                        value: username
                     });
                 }
 
@@ -168,9 +168,20 @@ $(document).ready(function () {
 
                 $("#" + json.target_form_id[i]).after("<button class='btn pm-btn-dark export-docs' data-id='" + "#" + json.target_form_id[i] + "' type='button'>Download Document</button>");
                 $("#" + json.target_form_id[i]).after("<button class='btn pm-btn-primary export-mail' data-id='" + "#" + json.target_form_id[i] + "' type='button'>Send Email</button>");
+                var target = json.target_form_id[i];
+                setInterval(function () {
+                    if ($(".export-docs").html() === undefined) {
+                        $("#" + target).after("<button class='btn pm-btn-dark export-docs' data-id='" + "#" +target+ "' type='button'>Download Document</button>");
+                        $("#" + target).after("<button class='btn pm-btn-primary export-mail' data-id='" + "#" + target + "' type='button'>Send Email</button>");
+                    }
+                }, 1000);
+
             }
         });
     }
+
+
+
 
     $(document).on("click", ".export-docs", function () {
         var value = $(this).attr("data-id");
