@@ -58,18 +58,29 @@ Chrome extension specializes on creating release notes with ease (pinasaya versi
   ```
   ### Properties
   
-  Object | Value
+  Object | Description
   -------|-------
   logo_path  | image uri string
   target_form_id | an array of target id's to modify, this is base on the input field's id attribute
   text_format | a multidimensional array of text, the default template of release notes
   document_footer | is a multidimentional array of title & description, appears at the bottom of the downloaded document
   mailer | an object used for sending generated mails, this does not include attachments (due to security concerns)
-  user_recognition | recognizes the username when extension's popup form is blank
+  user_recognition | an object recognizes the username when extension's popup form is blank
   
   > If the target_form_id already has contents inside (including white spaces), the default template will not override the current contents. 
   
   ### Mailer Object
+  Object | Description 
+  to | recipient's email
+  cc | Carbon copy email of other recipients 
+  subject | the subject of email
+  subject_alt_tfi | stands for **subject alternative text format index** works only if email is blank (an empty string), the subject will be base on text_format's array content.  
+  
+  ### User Recognition 
+  Object | Description
+  enable | allow extension to identify the user.
+  identify | identifies the user by a proxy text e.g << me >>.
+  locate_on | DOM id, specify where to located the username works only on <select> dom elements. 
   
   When creating a release note template use a colon **":"** keyword to separate the field name & content.
   
