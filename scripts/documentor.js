@@ -71,7 +71,7 @@ $(document).ready(function () {
         return initials.toLocaleUpperCase();
     }
 
-    function Export2Doc(element, filename = '') {
+    function Export2Doc(element, filename) {
         var preHtml = "<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/html401'><head><meta charset='utf-8'><title>Export HTML To Doc</title></head><body>";
         var postHtml = "</body></html>";
         //        var html = preHtml + document.getElementById("wrapper3").innerHTML + postHtml;
@@ -185,7 +185,7 @@ $(document).ready(function () {
 
     $(document).on("click", ".export-docs", function () {
         var value = $(this).attr("data-id");
-        Export2Doc(value);
+        Export2Doc(value,'');
     });
 
 
