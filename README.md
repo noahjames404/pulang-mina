@@ -1,7 +1,7 @@
 # Pulang Mina
 Chrome extension specializes on creating release notes with ease (pinasaya version).
 
-## Extension Information:
+## Compatibility:
   - Works only on Google Chrome applications.
 
 ## Installation
@@ -82,7 +82,7 @@ Chrome extension specializes on creating release notes with ease (pinasaya versi
   ----------|--------
   enable    | allow extension to identify the user.
   identify  | identifies the user by a proxy text e.g << me >>.
-  locate_on | DOM id, specify where to located the username works only on <select> dom elements. 
+  locate_on | DOM id, specify where to located the username works only on select dom elements. 
   
   When creating a release note template use a colon **":"** keyword to separate the field name & content.
   
