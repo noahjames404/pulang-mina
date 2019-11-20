@@ -2,8 +2,10 @@
 Chrome extension specializes on creating release notes with ease (pinasaya version).
 
 ## Compatibility:
-  - Works only on Google Chrome applications.
-
+  Applications
+  - Google Chrome (Version 72)
+  - Chromium (Version 78)
+  
 ## Installation
 1. Download & Extract the [zip file](https://github.com/noahjames404/pulang-mina/releases).
 2. Open google chrome.
@@ -105,7 +107,7 @@ Chrome extension specializes on creating release notes with ease (pinasaya versi
  
  
  
- ## Issues
+ ## Known Issues (Resolved on v1.1.2)
  If you're experiencing technical difficulties with the extension such as:
  - download button is not showing on target_form_id.
  - new issues does not generate default templates.
