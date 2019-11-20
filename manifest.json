@@ -4,12 +4,13 @@
     "description": "pulang mina (v1.0 pinasaya), develop by noah james yanga",    
     "background":{
         "scripts":["scripts/jquery.js","scripts/main.js"], 
-        "persistent": true 
+        "persistent": false 
     },
     "content_scripts":[{
         "matches":["http://*/*","https://*/*"],
         "js":["scripts/jquery.js","scripts/notify.js","scripts/documentor.js"],
-        "css":["pulang-mina-style.css"]
+        "css":["pulang-mina-style.css"],
+        "run_at":"document_end"
     }],
     "browser_action": {"default_popup": "popup.html"},
     "web_accessible_resources":["jquery.js","notify.js","documentor.js","format.json"],

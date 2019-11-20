@@ -3,15 +3,16 @@ var p = "hello";
 
 function save() {
     var name = document.getElementById("name").value;
-    
+
 
     chrome.runtime.sendMessage({
-        request:"update_username",value: name
+        request: "update_username",
+        value: name
     }, function (response) {
         document.getElementById("message-saved").style.display = "block";
-        setTimeout(function(){
+        setTimeout(function () {
             document.getElementById("message-saved").style.display = "none";
-        },5000);
+        }, 5000);
     });
 }
 
@@ -47,3 +48,5 @@ chrome.cookies.get({
     }
 
 });
+
+

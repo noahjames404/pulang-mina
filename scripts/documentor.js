@@ -171,7 +171,7 @@ $(document).ready(function () {
                 var target = json.target_form_id[i];
                 setInterval(function () {
                     if ($(".export-docs").html() === undefined) {
-                        $("#" + target).after("<button class='btn pm-btn-dark export-docs' data-id='" + "#" +target+ "' type='button'>Download Document</button>");
+                        $("#" + target).after("<button class='btn pm-btn-dark export-docs' data-id='" + "#" + target + "' type='button'>Download Document</button>");
                         $("#" + target).after("<button class='btn pm-btn-primary export-mail' data-id='" + "#" + target + "' type='button'>Send Email</button>");
                     }
                 }, 1000);
@@ -185,7 +185,7 @@ $(document).ready(function () {
 
     $(document).on("click", ".export-docs", function () {
         var value = $(this).attr("data-id");
-        Export2Doc(value,'');
+        Export2Doc(value, '');
     });
 
 
@@ -194,14 +194,18 @@ $(document).ready(function () {
         window.open('mailto:' + mailer.to + '?subject=' + generateMailSubject(id).replace(":", "") + getReferenceIssue() + generateMailCC(), "_parent");
     });
 
-
-    chrome.runtime.sendMessage({
+    var port = chrome.runtime.connect({
+        name: "pulang-mina"
+    });
+    port.postMessage({
         request: "username"
-    }, function (response) {
-        console.log(response.username);
-        username = response.username;
-        generateReleaseNote();
-        //        alert(response.username);
+    });
+    port.onMessage.addListener(function (response) {
+        if (response.username !== undefined) {
+            username = response.username;
+            generateReleaseNote();
+        }
+
     });
 
     function generateMailSubject(id) {
